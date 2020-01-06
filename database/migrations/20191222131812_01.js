@@ -7,6 +7,7 @@ exports.up = function(knex) {
       .notNullable()
       .unique();
     tbl.string("password", 25).notNullable();
+    tbl.boolean("public").default(true);
   });
 };
 
