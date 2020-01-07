@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 
 const users = [
+  { id: 0, username: "presets", password: "presets" },
   { id: 1, username: "bruce_banner@gmail.com", password: "Hulk" },
   { id: 2, username: "tony_stark@gmail.com", password: "Ironman" },
   { id: 3, username: "thor_odinson@gmail.com", password: "Thor" },

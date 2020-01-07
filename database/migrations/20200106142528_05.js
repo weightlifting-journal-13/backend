@@ -9,7 +9,7 @@ exports.up = function(knex) {
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
     table
-      .varchar("rest_time", 20)
+      .string("rest_time", 20)
       .notNullable()
       .onDelete("CASCADE")
       .onUpdate("CASCADE");
