@@ -2,11 +2,12 @@ exports.up = function(knex) {
   return knex.schema.createTable("completed_records", table => {
     table
       .integer("completed_records_id")
-      .increments()
-      .notNullable();
-    table
-      .integer(exercise_id)
       .notNullable()
+      .primary();
+    table
+      .integer("exercise_id")
+      .notNullable()
+      .unsigned()
       .references("exercise_id")
       .inTable("exercises");
     table.string("rest_time", 20).notNullable();

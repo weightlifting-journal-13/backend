@@ -203,7 +203,7 @@ exports.seed = function(knex) {
       suggested_order: 6
     },
 
-    //*workout_id 5 "Abs/Core
+    //*workout_id 6 "Abs/Core
     {
       records_id: 23,
       exercise_id: 46,
@@ -267,7 +267,7 @@ exports.seed = function(knex) {
       weight: 0,
       suggested_order: 5
     },
-    //*workout_id 6 "Biceps Day
+    //*workout_id 7 "Biceps Day
     {
       records_id: 30,
       exercise_id: 41,
@@ -304,7 +304,7 @@ exports.seed = function(knex) {
       weight: 10,
       suggested_order: 4
     },
-    //*workout_id 7 "BodyWeight Day
+    //*workout_id 8 "BodyWeight Day
     {
       records_id: 34,
       exercise_id: 72,
@@ -359,7 +359,7 @@ exports.seed = function(knex) {
       weight: 0,
       suggested_order: 3
     },
-    //*workout_id 8 "Stretching",
+    //*workout_id 9 "Stretching",
     {
       records_id: 40,
       exercise_id: 53,
@@ -441,7 +441,7 @@ exports.seed = function(knex) {
       weight: 0,
       suggested_order: 6
     },
-    //*workout_id 9 "Functional Training
+    //*workout_id 10 "Functional Training
     {
       records_id: 49,
       exercise_id: 64,
@@ -495,13 +495,55 @@ exports.seed = function(knex) {
       reps: 6,
       weight: 75,
       suggested_order: 6
+    },
+    //*workout_id 5 "Functional Training
+    {
+      records_id: 55,
+      exercise_id: 33,
+      rest_time: "1 min",
+      sets: 4,
+      reps: 10,
+      weight: 50,
+      suggested_order: 1
+    },
+    {
+      records_id: 56,
+      exercise_id: 34,
+      rest_time: "1 min",
+      sets: 4,
+      reps: 10,
+      weight: 40,
+      suggested_order: 2
+    },
+    {
+      records_id: 57,
+      exercise_id: 35,
+      rest_time: "1 min",
+      sets: 4,
+      reps: 10,
+      weight: 20,
+      suggested_order: 3
+    },
+    {
+      records_id: 58,
+      exercise_id: 36,
+      rest_time: "1 min",
+      sets: 4,
+      reps: 10,
+      weight: 0,
+      suggested_order: 4
+    },
+    {
+      records_id: 59,
+      exercise_id: 37,
+      rest_time: "1 min",
+      sets: 2,
+      reps: 8,
+      weight: 20,
+      suggested_order: 5
     }
+
     //*Start of Custom Exercise plans
-    // {records_id: 55, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 56, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 57, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 58, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 59, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
     // {records_id: 60, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
     // {records_id: 61, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
     // {records_id: 62, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},

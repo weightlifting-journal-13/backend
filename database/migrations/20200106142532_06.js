@@ -1,7 +1,12 @@
 exports.up = function(knex) {
   return knex.schema.createTable("workouts_records_jump", table => {
     table
+      .integer("jump_id")
+      .notNullable()
+      .primary();
+    table
       .integer("workout_id")
+      .unsigned()
       .references("workout_id")
       .inTable("workouts")
       .notNullable()
@@ -10,6 +15,7 @@ exports.up = function(knex) {
 
     table
       .integer("records_id")
+      .unsigned()
       .references("records_id")
       .inTable("records")
       .notNullable()

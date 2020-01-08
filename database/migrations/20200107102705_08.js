@@ -3,15 +3,25 @@ exports.up = function(knex) {
     knex.schema.createTable("history_completed_records_jump"),
     table => {
       table
+        .integer("jump_id")
+        .notNullable()
+        .primary();
+      table
         .integer("history_id")
+        .unsigned()
+        .notNullable()
         .references("history_id")
         .inTable("history")
-        .notNullable();
+        .onDelete("CASCADE")
+        .onUpdate("CASCADE");
       table
         .integer("completed_records_id")
+        .notNullable()
+        .unsigned()
         .references("completed_records_id")
         .inTable("completed_records")
-        .notNullable();
+        .onDelete("CASCADE")
+        .onUpdate("CASCADE");
     }
   );
 };

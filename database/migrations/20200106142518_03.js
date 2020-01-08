@@ -1,12 +1,13 @@
 exports.up = function(knex) {
   return knex.schema.createTable("workouts", table => {
     table
-      .integet("workout_id")
-      .increments()
-      .notNullable();
+      .integer("workout_id")
+      .notNullable()
+      .primary();
     table
       .integer("user_id")
       .notNullable()
+      .unsigned()
       .references("user_id")
       .inTable("users")
       .onUpdate("CASCADE")
@@ -15,7 +16,7 @@ exports.up = function(knex) {
       .string("workout_name", 60)
       .notNullable()
       .unique();
-    table.string("workout_description");
+    table.string("workout_description", 250);
   });
 };
 
