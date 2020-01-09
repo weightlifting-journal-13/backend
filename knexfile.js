@@ -1,4 +1,5 @@
 // Update with your config settings.
+require("./database/dbConfig");
 
 module.exports = {
   development: {
@@ -36,7 +37,6 @@ module.exports = {
     }
   },
 
-  //! CHECK PRODUCTION CODE IS FINISHED
   production: {
     client: "pg",
     connection: process.env.DATABASE_URL,
