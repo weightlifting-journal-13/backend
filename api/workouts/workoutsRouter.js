@@ -30,7 +30,6 @@ router.get("/presets", (req, res) => {
     });
 });
 
-
 router.post("/create", (req, res) => {
   let { user_id, workout_name, workout_description, records } = req.body;
 
@@ -42,7 +41,8 @@ router.post("/create", (req, res) => {
   } else if (records.length == 0) {
     res
       .status(404)
-      .json("cannot create workout plan without at least 1 exercise").end()
+      .json("cannot create workout plan without at least 1 exercise")
+      .end();
   }
 
   let wID;
@@ -57,25 +57,25 @@ router.post("/create", (req, res) => {
         user_id
       }));
       //   console.log(modifiedRecords, "modR");
-    Workout.addRecordsToWorkout(modifiedRecords, workout_id)
+      Workout.addRecordsToWorkout(modifiedRecords, workout_id)
         .then(response => {
-        console.log("res from addRecordsToWorkout", response);
-        Workout.returnAllWorkouts(user_id, wID)
+          console.log("res from addRecordsToWorkout", response);
+          Workout.returnAllWorkouts(user_id, wID)
             .then(allWorkoutResponse => {
-            res.status(200).json(allWorkoutResponse);
+              res.status(200).json(allWorkoutResponse);
             })
             .catch(error => {
-            console.log("errror after allworkoutresponse", error);
+              console.log("errror after allworkoutresponse", error);
             });
         })
         .catch(err => {
           console.log("error from addRecordsToWorkout", err);
-          res.status(500).json({ errorMessage: "internal error creating " });
+          res.status(500).json({ errorMessage: "2 internal error creating " });
         });
     })
     .catch(error => {
       console.log(error, "Error from error");
-      res.status(500).json({ errorMessage: "internal error creating " });
+      res.status(500).json({ errorMessage: "1 internal error creating " });
     });
 });
 

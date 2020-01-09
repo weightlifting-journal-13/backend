@@ -1,5 +1,7 @@
 // Update with your config settings.
-require("./database/dbConfig");
+
+// require("./database/dbConfig");
+// require("dotenv").config();
 
 module.exports = {
   development: {
@@ -45,6 +47,7 @@ module.exports = {
     },
     seeds: {
       directory: "./database/seeds"
-    }
+    },
+    useNullAsDefault: true
   }
 };
