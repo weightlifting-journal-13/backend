@@ -108,7 +108,7 @@ const exercises = [
   },
   { exercise_id: 68, name: "Sled Pull", target_region: "Functional Training" },
   { exercise_id: 69, name: "Sled Rows", target_region: "Functional Training" },
-  { exercise_id: 60, name: "Sled Lunge", target_region: "Functional Training" },
+  { exercise_id: 84, name: "Sled Lunge", target_region: "Functional Training" },
   {
     exercise_id: 71,
     name: "Sled Bear Crawl",
@@ -162,18 +162,6 @@ const exercises = [
     name: "Single Leg Box Squat",
     target_region: "BodyWeight Exercises"
   }
-  // {exercise_id: 84, name: "", target_region: ""},
-  // {exercise_id: 85, name: "", target_region: ""},
-  // {exercise_id: 86, name: "", target_region: ""},
-  // {exercise_id: 87, name: "", target_region: ""},
-  // {exercise_id: 88, name: "", target_region: ""},
-  // {exercise_id: 89, name: "", target_region: ""},
-  // {exercise_id: 90, name: "", target_region: ""},
-  // {exercise_id: 91, name: "", target_region: ""},
-  // {exercise_id: 92, name: "", target_region: ""},
-  // {exercise_id: 93, name: "", target_region: ""},
-  // {exercise_id: 94, name: "", target_region: ""},
-  // {exercise_id: 95, name: "", target_region: ""}
 ];
 
 exports.seed = function(knex) {

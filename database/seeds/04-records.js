@@ -8,7 +8,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 100,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 1
     },
     {
       records_id: 2,
@@ -17,7 +18,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 5,
       weight: 100,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 1
     },
     {
       records_id: 3,
@@ -26,7 +28,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 8,
       weight: 100,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 1
     },
     {
       records_id: 4,
@@ -35,7 +38,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 8,
       weight: 80,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 1
     },
     {
       records_id: 5,
@@ -44,7 +48,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 140,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 1
     },
     {
       records_id: 6,
@@ -53,7 +58,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 8,
       weight: 70,
-      suggested_order: 6
+      suggested_order: 6,
+      workout_id: 1
     },
     //* workout_id 2 shoulders day
     {
@@ -63,7 +69,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 10,
       weight: 65,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 2
     },
     {
       records_id: 8,
@@ -72,7 +79,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 10,
       weight: 65,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 2
     },
     {
       records_id: 9,
@@ -81,7 +89,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 10,
       weight: 65,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 2
     },
     {
       records_id: 10,
@@ -90,7 +99,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 20,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 2
     },
     {
       records_id: 11,
@@ -99,7 +109,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 15,
       weight: 30,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 2
     },
     //*workout_id 3 "Chest Day
     {
@@ -109,7 +120,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 8,
       weight: 100,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 3
     },
     {
       records_id: 13,
@@ -118,7 +130,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 12,
       weight: 50,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 3
     },
     {
       records_id: 14,
@@ -127,7 +140,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 8,
       weight: 80,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 3
     },
     {
       records_id: 15,
@@ -136,7 +150,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 15,
       weight: 0,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 3
     },
     {
       records_id: 16,
@@ -145,7 +160,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 8,
       weight: 15,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 3
     },
     //*workout_id 4 "Back Day
     {
@@ -155,7 +171,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 12,
       weight: 100,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 5
     },
     {
       records_id: 18,
@@ -164,7 +181,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 12,
       weight: 80,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 5
     },
     {
       records_id: 19,
@@ -173,7 +191,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 8,
       weight: 25,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 5
     },
     {
       records_id: 20,
@@ -182,7 +201,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 10,
       weight: 40,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 5
     },
     {
       records_id: 21,
@@ -191,7 +211,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 8,
       weight: 50,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 5
     },
     {
       records_id: 22,
@@ -200,7 +221,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 5,
       weight: 90,
-      suggested_order: 6
+      suggested_order: 6,
+      workout_id: 5
     },
 
     //*workout_id 6 "Abs/Core
@@ -211,7 +233,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 7
+      suggested_order: 7,
+      workout_id: 6
     },
     {
       records_id: 24,
@@ -220,7 +243,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 6
+      suggested_order: 6,
+      workout_id: 6
     },
     {
       records_id: 25,
@@ -229,7 +253,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 6
     },
     {
       records_id: 26,
@@ -238,7 +263,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 6
     },
     {
       records_id: 27,
@@ -247,7 +273,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 6
     },
     {
       records_id: 28,
@@ -256,7 +283,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 6
     },
     {
       records_id: 29,
@@ -265,7 +293,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 6
     },
     //*workout_id 7 "Biceps Day
     {
@@ -275,7 +304,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 40,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 7
     },
     {
       records_id: 31,
@@ -284,7 +314,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 40,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 7
     },
     {
       records_id: 32,
@@ -293,7 +324,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 40,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 7
     },
     {
       records_id: 33,
@@ -302,7 +334,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 12,
       weight: 10,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 7
     },
     //*workout_id 8 "BodyWeight Day
     {
@@ -312,7 +345,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 0,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 8
     },
     {
       records_id: 35,
@@ -321,7 +355,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 0,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 8
     },
     {
       records_id: 36,
@@ -330,7 +365,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 0,
-      suggested_order: 6
+      suggested_order: 6,
+      workout_id: 8
     },
     {
       records_id: 37,
@@ -339,7 +375,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 0,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 8
     },
     {
       records_id: 38,
@@ -348,7 +385,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 0,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 8
     },
     {
       records_id: 39,
@@ -357,7 +395,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 15,
       weight: 0,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 8
     },
     //*workout_id 9 "Stretching",
     {
@@ -367,7 +406,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 9
+      suggested_order: 9,
+      workout_id: 9
     },
     {
       records_id: 41,
@@ -376,7 +416,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 8
+      suggested_order: 8,
+      workout_id: 9
     },
     {
       records_id: 42,
@@ -385,7 +426,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 7
+      suggested_order: 7,
+      workout_id: 9
     },
     {
       records_id: 43,
@@ -394,7 +436,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 9
     },
     {
       records_id: 44,
@@ -403,7 +446,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 9
     },
     {
       records_id: 45,
@@ -412,7 +456,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 9
     },
     {
       records_id: 46,
@@ -421,7 +466,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 9
     },
     {
       records_id: 47,
@@ -430,7 +476,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 9
     },
     {
       records_id: 48,
@@ -439,7 +486,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 10,
       weight: 0,
-      suggested_order: 6
+      suggested_order: 6,
+      workout_id: 9
     },
     //*workout_id 10 "Functional Training
     {
@@ -449,7 +497,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 6,
       weight: 100,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 10
     },
     {
       records_id: 50,
@@ -458,7 +507,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 6,
       weight: 0,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 10
     },
     {
       records_id: 51,
@@ -467,7 +517,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 6,
       weight: 0,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 10
     },
     {
       records_id: 52,
@@ -476,7 +527,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 6,
       weight: 50,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 10
     },
     {
       records_id: 53,
@@ -485,7 +537,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 6,
       weight: 75,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 10
     },
     {
       records_id: 54,
@@ -494,7 +547,8 @@ exports.seed = function(knex) {
       sets: 3,
       reps: 6,
       weight: 75,
-      suggested_order: 6
+      suggested_order: 6,
+      workout_id: 10
     },
     //*workout_id 5 "Functional Training
     {
@@ -504,7 +558,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 50,
-      suggested_order: 1
+      suggested_order: 1,
+      workout_id: 5
     },
     {
       records_id: 56,
@@ -513,7 +568,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 40,
-      suggested_order: 2
+      suggested_order: 2,
+      workout_id: 5
     },
     {
       records_id: 57,
@@ -522,7 +578,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 20,
-      suggested_order: 3
+      suggested_order: 3,
+      workout_id: 5
     },
     {
       records_id: 58,
@@ -531,7 +588,8 @@ exports.seed = function(knex) {
       sets: 4,
       reps: 10,
       weight: 0,
-      suggested_order: 4
+      suggested_order: 4,
+      workout_id: 5
     },
     {
       records_id: 59,
@@ -540,50 +598,8 @@ exports.seed = function(knex) {
       sets: 2,
       reps: 8,
       weight: 20,
-      suggested_order: 5
+      suggested_order: 5,
+      workout_id: 5
     }
-
-    //*Start of Custom Exercise plans
-    // {records_id: 60, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 61, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 62, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 63, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 64, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 65, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 66, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 67, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 68, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 69, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 70, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 71, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 72, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 73, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 74, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 75, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 76, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 77, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 78, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 79, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 80, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 81, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 82, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 83, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 84, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 85, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 86, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 87, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 88, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 89, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 90, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 91, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 92, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 93, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 94, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 95, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 96, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 97, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 98, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 99, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
-    // {records_id: 100, exercise_id: 1, rest_time: "1 min", sets: 4, reps: 10, weight: 100, suggested_order: 1},
   ]);
 };
