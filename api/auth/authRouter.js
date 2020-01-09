@@ -15,6 +15,7 @@ router.post("/register", (req, res) => {
       res.status(201).json(saved);
     })
     .catch(error => {
+      console.log(error, "error from registration");
       res.status(500).json({ message: "internal error creating new user" });
     });
 });
@@ -25,13 +26,18 @@ router.post("/login", (req, res) => {
   Users.findBy({ username })
     .first()
     .then(user => {
-      // console.log(user, "made it into the .then");
+      console.log(user, "made it into the .then");
       // const bcryptRes = bcrypt.compareSync(password, user.password);
       // console.log(bcryptRes);
+
       if (user && bcrypt.compareSync(password, user.password)) {
         const token = signToken(user);
         console.log(token, "token");
-        res.status(200).json({ token, message: `Welcome ${user.username}` });
+        res.status(200).json({
+          token,
+          message: `Welcome ${user.username}`,
+          user_id: user.user_id
+        });
       } else {
         res.status(401).json({ message: "Invalid Credentials" });
       }
