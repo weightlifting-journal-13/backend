@@ -1,6 +1,7 @@
 // Update with your config settings.
-require("./database/dbConfig");
-require("dotenv").config();
+
+// require("./database/dbConfig");
+// require("dotenv").config();
 
 module.exports = {
   development: {
