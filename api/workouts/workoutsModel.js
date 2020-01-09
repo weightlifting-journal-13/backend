@@ -114,3 +114,21 @@ function addWorkout(user_id, workout_name, workout_description) {
       });
   });
 }
+
+// map[([{}, {}, {}], [{}, {}, {}], [{}, {}, {}], [{}, {}, {}], [{}, {}, {}])];
+
+// res.forEach(nestedArr => {
+//   nestedArr.map((eachExercise, index) => {
+//     return;
+//     <card eachExercise={eachExercise} key={index}></card>;
+//   });
+// })[({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {})];
+
+// function grouping(arr) {
+//   let groupedArr = [];
+//   let count = {};
+
+//   arr.forEach(obj => {
+//     count = { ...count, [obj.workout_id]: obj.workout_id };
+//   });
+// }

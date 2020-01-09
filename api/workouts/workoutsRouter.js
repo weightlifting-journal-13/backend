@@ -42,7 +42,7 @@ router.post("/create", (req, res) => {
   } else if (records.length == 0) {
     res
       .status(404)
-      .json("cannot create workout plan without at least 1 exercise");
+      .json("cannot create workout plan without at least 1 exercise").end()
   }
 
   let wID;
