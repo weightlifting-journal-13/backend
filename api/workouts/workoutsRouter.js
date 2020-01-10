@@ -16,6 +16,49 @@ router.get("/exercises", (req, res) => {
     });
 });
 
+router.get("/all_workouts", (req, res) => {
+  const { user_id } = req.body;
+  if (!user_id) {
+    res.status(404).json({
+      errorMessage:
+        "Did not recieve user_id which is required to fetch the list of workouts"
+    });
+  }
+  Workout.returnAllWorkouts(user_id)
+    .then(arrayOfExerciseEntries => {
+      function grouping(arr) {
+        let groupedArr = [];
+        let count = {};
+        arr.forEach(obj => {
+          if (count[obj.workout_id]) {
+            console.log("made it");
+            count[obj.workout_id].push(obj);
+            console.log(count, "count");
+          } else {
+            count = {
+              ...count,
+              [obj.workout_id]: [obj]
+            };
+          }
+        });
+        for (workout in count) {
+          groupedArr.push(count[workout]);
+        }
+        return groupedArr;
+      }
+
+      const modifiedShape = grouping(arrayOfExerciseEntries);
+      res.status(200).json(modifiedShape);
+      // res.status(200).json(arrayOfExerciseEntries);
+    })
+    .catch(error => {
+      console.log(error, "Error from get /exercises");
+      res.status(500).json({
+        errorMessage: "internal error fetching workouts list by user_id"
+      });
+    });
+});
+
 router.get("/presets", (req, res) => {
   Workout.findPresets()
     .then(presets => {
