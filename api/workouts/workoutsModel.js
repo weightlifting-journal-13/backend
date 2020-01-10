@@ -2,40 +2,14 @@ const db = require("../../database/dbConfig");
 
 module.exports = {
   findAllExercises,
-  findPresets,
-  addWorkout,
-  addRecordsToWorkout,
   findBy,
-  returnAllWorkouts
+  returnAllWorkouts,
+  addWorkout,
+  addRecordsToWorkout
 };
 
 function findAllExercises() {
   return db("exercises");
-}
-function findPresets() {
-  let workouts = db("workouts")
-    .innerJoin("workouts_records_jump", "workout_id", "=", "workout_id")
-    .where("workout_id", "<", 11)
-    .innerJoin("records", "records_id", "=", "records_id");
-
-  return workouts;
-}
-
-function getAllWorkouts(user_id) {
-  //! get all workout id's related to user,
-  // get all records associated with each id
-
-  let fullTable = db("workouts as W")
-    .where({ user_id })
-    .innerJoin(
-      "workouts_records_jump as WRJ",
-      "W.workout_id",
-      "=",
-      "WRJ.workout_id"
-    )
-    .innerJoin("records as R", "WRJ.records_id", "=", "R.records_id");
-
-  return fullTable;
 }
 
 function findBy(filter) {
@@ -45,7 +19,7 @@ function findBy(filter) {
     .where(filter);
 }
 
-function returnAllWorkouts(user_id, workout_id) {
+function returnAllWorkouts(user_id) {
   return new Promise((resolve, reject) => {
     db.select("*")
       .from("workouts")
@@ -115,20 +89,9 @@ function addWorkout(user_id, workout_name, workout_description) {
   });
 }
 
-// map[([{}, {}, {}], [{}, {}, {}], [{}, {}, {}], [{}, {}, {}], [{}, {}, {}])];
-
 // res.forEach(nestedArr => {
 //   nestedArr.map((eachExercise, index) => {
 //     return;
 //     <card eachExercise={eachExercise} key={index}></card>;
 //   });
-// })[({}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {})];
-
-// function grouping(arr) {
-//   let groupedArr = [];
-//   let count = {};
-
-//   arr.forEach(obj => {
-//     count = { ...count, [obj.workout_id]: obj.workout_id };
-//   });
-// }
+// })
