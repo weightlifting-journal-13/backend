@@ -2,6 +2,52 @@ const router = require("express").Router();
 
 const Workout = require("./workoutsModel");
 
+router.delete("/delete", (req, res) => {
+  const { workout_id, user_id } = req.body;
+  if (!workout_id) {
+    res
+      .status(404)
+      .json({ errrorMessage: "workout_id is required to delete a workout" })
+      .end();
+  } else if (!user_id) {
+    res.status(404).json({ errorMessage: "missing user_id" });
+  }
+  Workout.removeWorkoutAndRecords(workout_id, user_id)
+    .then(removed => {
+      console.log(removed, "removed response from delete by workout_id");
+      const workoutLessRemoved = grouping(removed.response3);
+      res.status(200).json({
+        status: "successfully deleted workout and associated exercises",
+        exercises_removed: removed.response,
+        workouts_removed: removed.response2,
+        all_workouts: workoutLessRemoved
+      });
+    })
+    .catch(error => {
+      console.log(error, "error from delete request");
+      res
+        .status(500)
+        .json({ errorMessage: "error deleting requested workout" });
+    });
+});
+
+router.put("/update", (req, res) => {
+  const { workout_id, records } = req.body;
+  Workout.update(workout_id, records)
+    .then(changed => {
+      //console.log(changed, 'response from put /update');
+      res
+        .status(200)
+        .json({ response: changed.response, response2: changed.response2 });
+    })
+    .catch(error => {
+      console.log(error, "Error from get /update");
+      res.status(500).json({
+        errorMessage: "internal error updating the specified workout "
+      });
+    });
+});
+
 router.get("/exercises", (req, res) => {
   Workout.findAllExercises()
     .then(exerciseList => {
@@ -26,27 +72,6 @@ router.get("/all_workouts", (req, res) => {
   }
   Workout.returnAllWorkouts(user_id)
     .then(arrayOfExerciseEntries => {
-      function grouping(arr) {
-        let groupedArr = [];
-        let count = {};
-        arr.forEach(obj => {
-          if (count[obj.workout_id]) {
-            console.log("made it");
-            count[obj.workout_id].push(obj);
-            console.log(count, "count");
-          } else {
-            count = {
-              ...count,
-              [obj.workout_id]: [obj]
-            };
-          }
-        });
-        for (workout in count) {
-          groupedArr.push(count[workout]);
-        }
-        return groupedArr;
-      }
-
       const modifiedShape = grouping(arrayOfExerciseEntries);
       res.status(200).json(modifiedShape);
       // res.status(200).json(arrayOfExerciseEntries);
@@ -121,5 +146,26 @@ router.post("/create", (req, res) => {
       res.status(500).json({ errorMessage: "1 internal error creating " });
     });
 });
+
+function grouping(arr) {
+  let groupedArr = [];
+  let count = {};
+  arr.forEach(obj => {
+    if (count[obj.workout_id]) {
+      console.log("made it");
+      count[obj.workout_id].push(obj);
+      console.log(count, "count");
+    } else {
+      count = {
+        ...count,
+        [obj.workout_id]: [obj]
+      };
+    }
+  });
+  for (workout in count) {
+    groupedArr.push(count[workout]);
+  }
+  return groupedArr;
+}
 
 module.exports = router;

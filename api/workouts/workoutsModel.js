@@ -1,13 +1,77 @@
 const db = require("../../database/dbConfig");
 
 module.exports = {
+  removeWorkoutAndRecords,
+  update,
   findAllExercises,
   findBy,
   returnAllWorkouts,
   addWorkout,
   addRecordsToWorkout
 };
-
+function removeWorkoutAndRecords(workout_id, user_id) {
+  return new Promise((resolve, reject) => {
+    db("records")
+      .where("workout_id", "=", workout_id)
+      .delete()
+      .then(response => {
+        db("workouts")
+          .where("workout_id", "=", workout_id)
+          .del()
+          .then(response2 => {
+            db.select("*")
+              .from("workouts")
+              .leftJoin("records", function() {
+                this.on(function() {
+                  this.on("records.user_id", "=", "workouts.user_id");
+                  this.andOn("records.workout_id", "=", "workouts.workout_id");
+                });
+              })
+              .where({ "workouts.user_id": user_id })
+              .then(response3 => {
+                resolve({ response, response2, response3 });
+              })
+              .catch(error3 => {
+                reject(error3);
+              });
+          })
+          .catch(error2 => {
+            reject(error2);
+          });
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+}
+function update(workout_id, records) {
+  return new Promise((resolve, reject) => {
+    db("records")
+      .where("workout_id", "=", workout_id)
+      .del()
+      .then(response => {
+        db("records")
+          .insert(records)
+          .then(response2 => {
+            db.select("*")
+              .from("records")
+              .where("workout_id", "=", workout_id)
+              .then(response3 => {
+                resolve({ response, response2, response3 });
+              })
+              .catch(error3 => {
+                reject(error3);
+              });
+          })
+          .catch(error2 => {
+            resolve(error2);
+          });
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+}
 function findAllExercises() {
   return db("exercises");
 }
@@ -88,10 +152,3 @@ function addWorkout(user_id, workout_name, workout_description) {
       });
   });
 }
-
-// res.forEach(nestedArr => {
-//   nestedArr.map((eachExercise, index) => {
-//     return;
-//     <card eachExercise={eachExercise} key={index}></card>;
-//   });
-// })
