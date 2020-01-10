@@ -32,9 +32,9 @@ exports.up = function(knex) {
         .notNullable()
         .unsigned()
         .references("user_id")
-        .inTable("users")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .inTable("users");
+      // .onUpdate("CASCADE")
+      // .onDelete("CASCADE");
       table
         .string("workout_name", 60)
         .notNullable()
@@ -51,17 +51,17 @@ exports.up = function(knex) {
         .notNullable()
         .unsigned()
         .references("user_id")
-        .inTable("users")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
+        .inTable("users");
+      // .onDelete("CASCADE")
+      // .onUpdate("CASCADE");
       table
         .integer("workout_id")
         .unsigned()
         .notNullable()
         .references("workout_id")
-        .inTable("workouts")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
+        .inTable("workouts");
+      // .onDelete("CASCADE")
+      // .onUpdate("CASCADE");
       table.datetime("start_datetime").notNullable();
       table.datetime("stop_datetime").notNullable();
     })
@@ -75,9 +75,9 @@ exports.up = function(knex) {
         .notNullable()
         .unsigned()
         .references("exercise_id")
-        .inTable("exercises")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
+        .inTable("exercises");
+      // .onDelete("CASCADE")
+      // .onUpdate("CASCADE");
       table.string("rest_time", 20).notNullable();
 
       table.integer("sets", 2).notNullable();
@@ -92,16 +92,16 @@ exports.up = function(knex) {
         .unsigned()
         .references("workout_id")
         .inTable("workouts")
-        .notNullable()
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
+        .notNullable();
+      // .onDelete("CASCADE")
+      // .onUpdate("CASCADE");
       table
         .integer("user_id", 20)
         .unsigned()
         .references("user_id")
-        .inTable("users")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
+        .inTable("users");
+      // .onDelete("CASCADE")
+      // .onUpdate("CASCADE");
     })
     .createTable("completed_records", table => {
       table
@@ -119,9 +119,9 @@ exports.up = function(knex) {
         .unsigned()
         .notNullable()
         .references("history_id")
-        .inTable("history")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE");
+        .inTable("history");
+      // .onDelete("CASCADE")
+      // .onUpdate("CASCADE");
       table.string("rest_time", 20).notNullable();
       table.integer("sets", 2).notNullable();
       table.string("reps", 250).notNullable();
