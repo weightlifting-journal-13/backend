@@ -10,6 +10,9 @@
     "latest": "knex migrate:latest",
     "rollback": "knex migrate:rollback"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natemosco/User-Auth-Template.git"
